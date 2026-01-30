@@ -1,1 +1,3 @@
-# 2025-2026-2A-NNPTUD-C6_Lab03
+Nguyễn Minh Đạt
+
+2280600605

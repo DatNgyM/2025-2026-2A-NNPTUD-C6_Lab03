@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Lý Sản Phẩm</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Quản Lý Sản Phẩm</h1>
+        
+        <!-- Search and Controls Section -->
+        <div class="controls">
+            <div class="search-box">
+                <label for="searchInput">Tìm kiếm theo tên:</label>
+                <input type="text" id="searchInput" placeholder="Nhập tên sản phẩm...">
+            </div>
+
+            <div class="sort-controls">
+                <label>Sắp xếp:</label>
+                <button id="sortPriceAsc" class="btn-sort">Giá Tăng Dần ↑</button>
+                <button id="sortPriceDesc" class="btn-sort">Giá Giảm Dần ↓</button>
+                <button id="sortNameAsc" class="btn-sort">Tên A-Z ↑</button>
+                <button id="sortNameDesc" class="btn-sort">Tên Z-A ↓</button>
+            </div>
+
+            <div class="pagination-size">
+                <label for="pageSize">Số dòng/trang:</label>
+                <select id="pageSize">
+                    <option value="5">5</option>
+                    <option value="10" selected>10</option>
+                    <option value="20">20</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Loading Indicator -->
+        <div id="loading" class="loading">Đang tải dữ liệu...</div>
+
+        <!-- Error Message -->
+        <div id="error" class="error" style="display: none;"></div>
+
+        <!-- Products Table -->
+        <div class="table-container">
+            <table id="productsTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Hình ảnh</th>
+                        <th>Tên sản phẩm</th>
+                        <th>Giá</th>
+                        <th>Danh mục</th>
+                        <th>Mô tả</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <!-- Data will be inserted here -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Pagination Controls -->
+        <div class="pagination">
+            <button id="prevPage" class="btn-page">« Trước</button>
+            <span id="pageInfo">Trang 1</span>
+            <button id="nextPage" class="btn-page">Sau »</button>
+        </div>
+
+        <!-- Product Count Info -->
+        <div class="info">
+            <span id="productCount"></span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
